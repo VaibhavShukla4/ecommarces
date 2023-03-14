@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+.navbar {
+  background: linear-gradient(45deg, black, transparent);
+}
