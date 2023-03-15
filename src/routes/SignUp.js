@@ -64,7 +64,7 @@ const SignUp = () => {
         <label>Full Name</label>
         <input
           type="text"
-          className="form-control"
+          className="form-control "
           required
           onChange={(e) => setFullName(e.target.value)}
           value={fullName}

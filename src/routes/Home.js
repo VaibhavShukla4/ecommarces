@@ -166,7 +166,7 @@ const Home = () => {
       ) : (
         <>
           {products.length > 0 && (
-            <div className="container-fluid">
+            <div className="container-fluid main_Container">
               <h1 className="text-center">Products</h1>
               <div className="products-box">
                 <Products
