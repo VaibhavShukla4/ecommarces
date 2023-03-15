@@ -6,7 +6,6 @@ import Home from "./routes/Home";
 import SignUp from "./routes/SignUp";
 import Login from "./routes/Login";
 import NotFound from "./routes/NotFound";
-import AddProductsPage from "./components/AddProductsPage";
 import Cart from "./components/Cart";
 import Account from "./routes/Account";
 function App() {
@@ -16,7 +15,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Account />}>
             <Route index element={<Home />} />
-            <Route path="/addproductspage" element={<AddProductsPage />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />
           </Route>
