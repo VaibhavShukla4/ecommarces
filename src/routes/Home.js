@@ -137,6 +137,7 @@ const Home = () => {
                     products={products}
                     addToCart={addToCart}
                     searchTerm={searchTerm}
+                    user={user}
                   />
                 </div>
               </div>

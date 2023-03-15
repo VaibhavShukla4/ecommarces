@@ -1,7 +1,7 @@
 import React from "react";
 import IndividualProduct from "./IndividualProduct";
 
-const Products = ({ products, addToCart, searchTerm }) => {
+const Products = ({ products, addToCart, searchTerm, user = { user } }) => {
   console.log(products);
 
   return products
@@ -16,7 +16,12 @@ const Products = ({ products, addToCart, searchTerm }) => {
       }
     })
     .map((val) => (
-      <IndividualProduct key={val.ID} val={val} addToCart={addToCart} />
+      <IndividualProduct
+        key={val.ID}
+        val={val}
+        addToCart={addToCart}
+        user={user}
+      />
     ));
 };
 export default Products;
