@@ -1,38 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import Navbar from "./Navbar";
-// import Products from "./Products";
-// import { auth, fs } from "../config/Config";
-// const Home = () => {
-//   const GetCurrentUser = () => {
-//     const [user, setUser] = useState(null);
-//     useEffect(() => {
-//       auth.onAuthStateChanged((user) => {
-//         if (user) {
-//           fs.collection("users")
-//             .doc(user.uid)
-//             .get()
-//             .then((snapshot) => {
-//               setUser(snapshot.data().FullName);
-//             });
-//         } else {
-//           setUser(null);
-//         }
-//       });
-//     }, []);
-//     return user;
-//   };
-
-//   const user = GetCurrentUser();
-//   console.log(user);
-//   return (
-//     <div>
-//       <Navbar user={user} />
-//       <Products />
-//     </div>
-//   );
-// };
-
-// export default Home;
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Products from "../components/Products";
@@ -147,8 +112,6 @@ const Home = () => {
             progress: undefined,
           });
         });
-    } else {
-      // props.history.push("/login");
     }
   };
   // console.log(products);
@@ -161,24 +124,26 @@ const Home = () => {
         setSearchTerm={setSearchTerm}
       />
       <br></br>
-      {loading ? (
-        <Loading />
-      ) : (
-        <>
-          {products.length > 0 && (
-            <div className="container-fluid main_Container">
-              <h1 className="text-center">Products</h1>
-              <div className="products-box">
-                <Products
-                  products={products}
-                  addToCart={addToCart}
-                  searchTerm={searchTerm}
-                />
+      <div className="main_Container">
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            {products.length > 0 && (
+              <div className="container-fluid ">
+                <h1 className="text-center">Products</h1>
+                <div className="products-box">
+                  <Products
+                    products={products}
+                    addToCart={addToCart}
+                    searchTerm={searchTerm}
+                  />
+                </div>
               </div>
-            </div>
-          )}
-        </>
-      )}
+            )}
+          </>
+        )}
+      </div>
     </>
   );
 };

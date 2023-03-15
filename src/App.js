@@ -8,7 +8,6 @@ import Login from "./routes/Login";
 import NotFound from "./routes/NotFound";
 import AddProductsPage from "./components/AddProductsPage";
 import Cart from "./components/Cart";
-// import IndividualCartProduct from "./components/IndividualCartProduct";
 import Account from "./routes/Account";
 function App() {
   return (

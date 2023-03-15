@@ -201,7 +201,7 @@ const Cart = () => {
       <Navbar user={user} totalProducts={totalProducts} />
       <br></br>
       {cartProducts.length > 0 && (
-        <div className="container-fluid">
+        <div className="container-fluid main_Container">
           <h1 className="text-center">Cart</h1>
           <div className="products-box">
             <CartProducts
